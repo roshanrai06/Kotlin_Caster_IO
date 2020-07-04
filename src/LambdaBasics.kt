@@ -29,7 +29,7 @@ fun main() {
     val greeter4: (String, String) -> Unit = { firstName: String, lastName: String ->
         val modifiedFirstName = firstName.toUpperCase()
         val modifiedLastName = lastName.toUpperCase()
-        println("Hello with Unit $modifiedFirstName $modifiedLastName")
+        println("Hello With Unit Return Type $modifiedFirstName $modifiedLastName")
     }
     greeter4("Roshan", "Rai")
 }
