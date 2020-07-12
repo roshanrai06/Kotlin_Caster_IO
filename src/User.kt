@@ -27,6 +27,11 @@ class User(private var firstName: String, private var lastName: String) {
         }
     }
 
+    object FavouriteFood {
+        var name: String = "Chicken"
+
+    }
+
 }
 
 fun main() {
@@ -37,4 +42,7 @@ fun main() {
     println(user1.fullName)
     // user.printFullName()
     User.createUser("Roshan", "Rai Companion").printFullName()
+    println(User.FavouriteFood.name)
+    User.FavouriteFood.name = "Now Its Paneer"
+    println(User.FavouriteFood.name)
 }
