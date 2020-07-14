@@ -18,7 +18,7 @@ class User(private var firstName: String, private var lastName: String) {
     }
 
     fun printFullName() {
-        println("$firstName $lastName")
+        println("$firstName, $lastName")
     }
 
     companion object {
