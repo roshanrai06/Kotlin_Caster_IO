@@ -10,6 +10,10 @@ fun main(args: Array<String>) {
 
         }
     }
+    val name = "Roshan Rai"
+    println(name.initials())
+    val age = 29
+    println(age.isAdult())
 
 }
 
