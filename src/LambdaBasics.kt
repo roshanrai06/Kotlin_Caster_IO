@@ -32,4 +32,60 @@ fun main() {
         println("Hello With Unit Return Type $modifiedFirstName $modifiedLastName")
     }
     greeter4("Roshan", "Rai")
+    lineLogger {
+        println("Message1")
+        println("Message1")
+        println("Message1")
+    }
+    repeater(5) { index ->
+        if (index < 3) {
+            println("Hello")
+        } else {
+            println("Bye")
+
+        }
+
+    }
+
+
+
+    derbyAnnouncer { player: String ->
+        "$player is a great asset to the team"
+
+
+    }
+}
+
+fun derbyAnnouncer(block: (String) -> String) {
+    val players = listOf(
+            "Roshan",
+            "Priyanka",
+            "Pusu",
+            "Gusu",
+            "Gala",
+            "Masala"
+    )
+    val randomPlayers = players.random()
+    println("Next player is $randomPlayers")
+    val announceMessage = block(randomPlayers)
+    println(announceMessage)
+
+}
+
+fun lineLogger(block: () -> Unit) {
+    repeat(1) {
+        println("************")
+    }
+    block()
+    repeat(1) {
+        println("************")
+    }
+
+}
+
+fun repeater(times: Int, block: (index: Int) -> Unit) {
+    repeat(times) { index ->
+        block(index)
+
+    }
 }
